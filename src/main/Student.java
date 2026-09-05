@@ -1,0 +1,25 @@
+package main;
+
+public class Student  extends User{
+	private Long studentNumber;
+
+	public Student(String id, String email, String password, boolean isVerified, Long studentNumber) {
+		super(id, email, password, isVerified);
+		this.studentNumber = studentNumber;
+	}
+	
+	public Student(String id, String email, String password, Long employementNumber) {
+	    this(id, email, password, false, employementNumber);
+	}
+
+	@Override
+	public double getHourlyRate() {
+		
+		return 20.0;
+	}
+	
+	@Override
+	public String getRoleName() {
+	    return "Student";
+	}
+}

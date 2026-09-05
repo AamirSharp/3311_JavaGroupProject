@@ -1,0 +1,27 @@
+package main;
+
+public class Staff extends User{
+	private Long staffNumber;
+
+	public Staff(String id, String email, String password, boolean isVerified, Long staffNumber) {
+		super(id, email, password, isVerified);
+		this.staffNumber = staffNumber;
+	}
+	
+	public Staff(String id, String email, String password, Long employementNumber) {
+	    this(id, email, password, false, employementNumber);
+	}
+
+	@Override
+	public double getHourlyRate() {
+		// 
+		return 40.0;
+	}
+	
+	@Override
+	public String getRoleName() {
+	    return "Staff";
+	}
+	
+	
+}
